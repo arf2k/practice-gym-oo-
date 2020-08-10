@@ -4,7 +4,7 @@ class Membership
 
     def initialize(name, gym, lifter)
         @name = name
-        @gym = gym
+        @gym = gym  
         @lifter = lifter
         @@all << self
     end
@@ -12,5 +12,7 @@ class Membership
     def self.all
         @@all
     end
+
+
 
 end

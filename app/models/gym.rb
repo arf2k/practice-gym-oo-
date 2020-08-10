@@ -24,5 +24,10 @@ def lifter
     end
 end
 
+def self.gyms 
+    Gym.all.map do |gym|
+        gym.name
+        end
+    end
 
 end
