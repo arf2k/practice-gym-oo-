@@ -12,4 +12,17 @@ class Lifter
         @@all
     end
 
+    def membership
+        Membership.all.select do |membership|
+            membership.lifter == self
+        end
+    end
+
+    def gym
+        membership.map do |membership|
+            membership.gym
+        end
+    end
+
+
 end

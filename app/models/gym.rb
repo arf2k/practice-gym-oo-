@@ -12,5 +12,17 @@ def self.all
     @@all
 end
 
+def membership
+    Membership.all.select do |membership|
+        membership.gym == self
+    end
+end
+
+def lifter
+    membership.map do |membership|
+        membership.lifter
+    end
+end
+
 
 end
